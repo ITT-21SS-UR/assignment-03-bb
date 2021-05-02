@@ -1,0 +1,34 @@
+1. 
+Because of the subjective perception of each participant, the self-reported meassure
+for task performance can be different from the objevtively messured values.
+Hornbaeck suggests a combination of the two to ensure a balanced result.
+
+2.
+The advantage of a research hypothesis is that it helps with the desicion what type of data needs
+to be collected and which should be ignored. Forthermore it lets you focus on relevant factors
+and makes it clear what is to be expected and is essential for drawing reasonable conclusions. 
+A hypothesis is also helpful for designing a research question.
+
+The Limitation of research hypothesis is that it can lead to a bias. This can happen when 
+the experiment is implemented in a arranged or manipulated way so it gives the desired outcome.
+
+
+3.
+If you conduct an experiment, it is important to find the right group of participants. 
+There are cases where it's necesarry to have a broad sample of participants 
+of different background, gender, age, knowledge and skills. But in some experiments
+it's better to have a specific group of people with explicit characteristics.
+If you test a software which is mainly used by people with media informatic and software 
+engineering background, it makes sense to conduct the user studies with media informatic
+students. Due to the skill and knowledge background of the students, you can implement
+more difficult tasks without explaning too much of the basic technics and theory of 
+the experiment. An example for that case would be testing an application where 
+the user gets help solving errors in an Integrated Development Environment.
+Because this software is used mainly by software engineers, it wouldn't make sense,
+to include people from other professions. 
+A study for which a broader sample of participants would be needed could be for 
+example a user study for an application which helps you navigate through the city
+and provides tourist informations. Such an application is used by people of all ages,
+backgrounds and gender. 
+
+
