@@ -88,9 +88,9 @@ class Experiment(QtWidgets.QMainWindow):
 
     #if key is pressed while the programm is waiting for a reaction, the reactiontime is saved
     def keyPressEvent(self, ev):
-        print(ev.text())
         print(self.waitforreaction)
         if self.waitforreaction:
+            print(ev.text())
             if ev.text() == "a":
                 self.ui.rightArrowText.hide()
                 self.ui.leftArrowText.hide()
@@ -116,8 +116,8 @@ class Experiment(QtWidgets.QMainWindow):
     def explanation_one(self):
         self.ui.explainText.setText("A left arrow will be shown on the screen. "
                                     "When it appears,\npress the left arrow key "
-                                    "on your keyboard as fast as possible. \n"
-                                    "Press the Button below to start")
+                                    "on your keyboard as fast as possible.")
+                                    
 
     def explanation_two(self):
         self.ui.explainText.setText("Either a left or right arrow will be shown "
@@ -133,7 +133,6 @@ class Experiment(QtWidgets.QMainWindow):
     def start_reaction(self):
         if self.counter < 2:
             print("setup wait")
-            self.waitforreaction = True
             QtCore.QTimer.singleShot(random.randint(2, 6)*1000, lambda: self.show_stimulus())
         else:
             self.testhandler()
@@ -153,6 +152,7 @@ class Experiment(QtWidgets.QMainWindow):
             else:
                 self.ui.leftArrowText.show()
                 self.shownkey = "left"
+        self.waitforreaction = True
 
     def get_reactiontime(self):
         return dt.datetime.now().timestamp() - self.stimulustarttime
@@ -167,7 +167,8 @@ class Experiment(QtWidgets.QMainWindow):
             self.reactiondict["correct key"].append(True)
         else:
             self.reactiondict["correct key"].append(False)
-        self.reactiondict["timestamp"].append(dt.datetime.now().timestamp())
+        self.reactiondict["timestamp"].append(dt.datetime.now())
+
 
 
 
