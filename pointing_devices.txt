@@ -1,0 +1,19 @@
+a) As the name suggests the advantages of direct input are that it is more direct and as such, users can instantly navigate to the desired location,
+without having to think about moving a pointer object on the screen. This makes direct input more intuitiv, as it mimics üpointing as humans do in
+real life and also more precise at selecting targets as you can't really over- or undershoot the target. Direct input makes less and less sense 
+when the pinting device is far from the screen as the feel less precise. So for example for a wii-mote, pointing with direct input would 
+not make sense.
+
+b) The Classification would be: 
+Direct input (as it is a normal touch-screen (the escalation only shows where the pointer is located))
+Absolute movement (though relative input is used for very small targets in the high precision version
+Isotonic
+Position control
+translation
+2 degrees of freedom (x and y axis)
+possible states 2 (escalated and normal mode. There might be more, though these are not mentioned in the paper.
+ 		   The high performance version has addtional modes for small targets)
+
+	
+ 
+c) They used an IPAQ PDA with screen size of 550 x 730mm or 240 x 320 px 
