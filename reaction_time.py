@@ -159,13 +159,13 @@ class Experiment(QtWidgets.QMainWindow):
 
     # saves the results to an .csv file
     def save_results(self, dict):
-        if path.exists("results.csv"):
-            resultsdfold = pd.read_csv("results.csv")
+        if path.exists("reaction_time_results.csv"):
+            resultsdfold = pd.read_csv("reaction_time_results.csv")
             resultsdfnew = pd.DataFrame.from_dict(dict)
             resultsdf = resultsdfold.append(resultsdfnew)
         else:
             resultsdf = pd.DataFrame.from_dict(dict)
-        resultsdf.to_csv("results.csv", index=False)
+        resultsdf.to_csv("reaction_time_results.csv", index=False)
 
 
 def main():
