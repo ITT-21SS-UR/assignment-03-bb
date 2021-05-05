@@ -6,9 +6,6 @@ import pandas as pd
 import time
 import os.path as path
 
-#csv rows
-FIELDNAMES = ['ID', 'condition', 'shown stimulus', 'pressed key', 'correct key', 
-              'reaction time', 'timestamp']
 
 
 class Experiment(QtWidgets.QMainWindow):
@@ -16,8 +13,8 @@ class Experiment(QtWidgets.QMainWindow):
     def __init__(self):
         super(Experiment, self).__init__()
         self.ui = uic.loadUi("experiment.ui", self)
-        self.reactiondict = {'ID': [], 'condition': [], 'shown stimulus': [], 'pressed key': [], 'correct key': [],
-                             'reaction time (s)': [], 'timestamp': []}
+        self.reactiondict = {'ID': [], 'condition': [], 'shown_stimulus': [], 'pressed_key': [], 'correct_key': [],
+                             'reaction_time_s': [], 'timestamp': []}
         self.waitforreaction = False
         self.stimulustarttime = dt.datetime.now().timestamp()
         print(type(self.stimulustarttime))
@@ -115,14 +112,16 @@ class Experiment(QtWidgets.QMainWindow):
 
     def explanation_one(self):
         self.ui.explainText.setText("A left arrow will be shown on the screen. "
-                                    "When it appears,\npress the left arrow key "
+                                    "When it appears,\npress the 'a'-key "
                                     "on your keyboard as fast as possible.")
                                     
 
     def explanation_two(self):
         self.ui.explainText.setText("Either a left or right arrow will be shown "
-                                    "on the screen. \nPress the suitable arrow key "
-                                    "on your keyboard as fast as possible. \n"
+                                    "on the screen. \nPress the 'a'-key "
+                                    "on your keyboard when the left arrow appears \n"
+                                    "and the 'd'-key when the right one appears "
+                                    "-as fast as possible. \n"
                                     "Press the Button below to start")
 
     def show_text_end(self):
@@ -160,13 +159,13 @@ class Experiment(QtWidgets.QMainWindow):
     def save_reaction(self, reactiontime = 0.0, pressedkey = "left"):
         self.reactiondict["ID"].append(self.participant_id)
         self.reactiondict["condition"].append(self.testtype)
-        self.reactiondict["shown stimulus"].append(self.shownkey)
-        self.reactiondict["pressed key"].append(pressedkey)
-        self.reactiondict["reaction time (s)"].append(reactiontime)
+        self.reactiondict["shown_stimulus"].append(self.shownkey)
+        self.reactiondict["pressed_key"].append(pressedkey)
+        self.reactiondict["reaction_time_s"].append(reactiontime)
         if self.shownkey == pressedkey:
-            self.reactiondict["correct key"].append(True)
+            self.reactiondict["correct_key"].append(True)
         else:
-            self.reactiondict["correct key"].append(False)
+            self.reactiondict["correct_key"].append(False)
         self.reactiondict["timestamp"].append(dt.datetime.now())
 
 

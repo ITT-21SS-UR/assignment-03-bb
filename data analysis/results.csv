@@ -1,4 +1,4 @@
-ID,condition,shown stimulus,pressed key,correct key,reaction time (s),timestamp
+ID,condition,shown_stimulus,pressed_key,correct_key,reaction_time_s,timestamp
 5,A,left,left,True,0.4565420150756836,2021-05-04 18:26:57.382400
 5,A,left,right,False,0.4537010192871094,2021-05-04 18:26:59.879000
 5,B,right,right,True,0.37695908546447754,2021-05-04 18:27:07.300514
