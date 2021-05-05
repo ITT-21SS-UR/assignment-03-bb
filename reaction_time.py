@@ -6,6 +6,7 @@ import pandas as pd
 import time
 import os.path as path
 
+# the script was created in a joint session by both team mates 
 
 class Experiment(QtWidgets.QMainWindow):
 
